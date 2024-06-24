@@ -25,20 +25,20 @@ public class Store {
         System.out.print("Quantity in stock: ");
         x.stock = sc.nextInt();
 
-        System.out.printf("Product data: %s , %d units , Total: $ %.2f/n", x.name , x.stock , x.TotalValueInStock());
+        System.out.println(x);
 
 
         System.out.print("Enter the number of products to be added in stock: ");
         add = sc.nextInt();
         x.AddProducts(add);
 
-        System.out.printf("Product data: %s , %d units , Total: $ %.2f/n", x.name , x.stock , x.TotalValueInStock());
+        System.out.println(x);
 
         System.out.print("Enter the number of products to be removed from stock: ");
         remove = sc.nextInt();
         x.RemoveProducts(remove);
 
-        System.out.printf("Product data: %s , %d units , Total: $ %.2f/n", x.name , x.stock , x.TotalValueInStock());
+        System.out.println(x);
 
 
 
