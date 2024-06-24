@@ -4,7 +4,7 @@ import entities.Triangle;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Program {
+public class Classes {
     public static void main(String[] args){
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
@@ -22,18 +22,15 @@ public class Program {
         y.b = sc.nextDouble();
         y.c = sc.nextDouble();
 
-        double p = (x.a + x.b + x.c) / 2.0;
-        double area = Math.sqrt(p*(p-x.a)*(p-x.b)*(p-x.c));
+        double areaX = x.area();
+        double areaY = y.area();
 
-        double p1 = (y.a + y.b + y.c) / 2.0;
-        double area1 = Math.sqrt(p1*(p1-y.a)*(p1-y.b)*(p1-y.c));
-
-        System.out.printf("Triangle X area: %.2f", area);
+        System.out.printf("Triangle X area: %.4f", areaX);
         System.out.println(" ");
-        System.out.printf("Triangle Y area: %.2f", area1);
+        System.out.printf("Triangle Y area: %.4f", areaY);
         System.out.println(" ");
 
-        if (area > area1){
+        if (areaX > areaY){
             System.out.println("Larger area: X");
         }
         else{
