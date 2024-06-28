@@ -1,0 +1,3 @@
+São muito utilizados em entidades de software devido a aceitação de valores null
+como no exemplo de um negocio onde a data de nascimento e opcional a utilização do
+warapper e util utilizando em vez de double birthDate "Double birthDate"

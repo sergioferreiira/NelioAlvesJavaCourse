@@ -136,13 +136,13 @@ public class VectorProgram {
         }
 
         System.out.println("Busy rooms: ");
-        for(int i =0; i < roomArray.length; i++){
-            if(roomArray[i] != null){
-                System.out.println(roomArray[i].getRoom()
+        for (VectorClasses vectorClasses : roomArray) {
+            if (vectorClasses != null) {
+                System.out.println(vectorClasses.getRoom()
                         + ": "
-                        + roomArray[i].getName()
+                        + vectorClasses.getName()
                         + ", "
-                        + roomArray[i].getEmail()
+                        + vectorClasses.getEmail()
                 );
             }
         }
