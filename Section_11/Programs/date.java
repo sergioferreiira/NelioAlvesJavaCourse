@@ -26,8 +26,8 @@ public class date {
         LocalDate d08 = LocalDate.parse("20/07/2022", fmt1);
         LocalDateTime d09 = LocalDateTime.parse("20/07/2022 01:30", fmt2);
 
-        LocalDate d10 = LocalDate.of(2022, 07, 20);
-        LocalDateTime d11 = LocalDateTime.of(2022, 07, 20, 1, 30);
+        LocalDate d10 = LocalDate.of(2022, 7, 20);
+        LocalDateTime d11 = LocalDateTime.of(2022, 7, 20, 1, 30);
 
         System.out.println("d01 = " + d01.toString());
         System.out.println("d02 = " + d02.toString());
