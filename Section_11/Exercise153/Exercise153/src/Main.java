@@ -1,6 +1,9 @@
-import intities.Client;
-import intities.Order;
-import intities.Product;
+package Section_11.Exercise153.Exercise153.src;
+
+import Section_11.Exercise153.Exercise153.src.intities.Client;
+import Section_11.Exercise153.Exercise153.src.intities.Order;
+import Section_11.Exercise153.Exercise153.src.intities.OrderItem;
+import Section_11.Exercise153.Exercise153.src.intities.Product;
 
 import javax.swing.text.DateFormatter;
 import java.time.LocalDate;
@@ -37,11 +40,12 @@ public class Main {
         String status = sc.nextLine();
 
         System.out.print("How many items to this order? ");
-        int manyItens = sc.nextInt();
+        int manyItems = sc.nextInt();
 
-        for(int y = 1; y < manyItens; y ++){
-            System.out.printf("Enter #%d item data", y);
-
+        sc.nextLine();
+        for(int y = 1; y <= manyItems; y ++){
+            System.out.printf("Enter #%d item data ", y);
+            System.out.println();
             System.out.print("Product name: ");
             String productName = sc.nextLine();
 
@@ -50,12 +54,14 @@ public class Main {
 
             System.out.print("Quantity: ");
             int quantity = sc.nextInt();
-            Order order = new Order();
 
+            OrderItem order = new OrderItem(quantity,productPrice);
+            Order orderlist = new Order();
+            orderlist.addOrderitens(order);
+            sc.nextLine();
         }
 
 
-        System.out.println("Client: " + client1.getName() + " " + client1.getBirthDate() + " - " +client1.getEmail());
 
         sc.close();
 

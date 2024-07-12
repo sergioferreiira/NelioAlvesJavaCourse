@@ -1,4 +1,4 @@
-package intities;
+package Section_11.Exercise153.Exercise153.src.intities;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -41,5 +41,11 @@ public class Order {
 
     public void removeOrderitens(OrderItem product) {
         this.orderitens.remove(product);
+    }
+    public List<OrderItem> getOrderitens() {
+        return orderitens;
+    }
+    public void setOrderitens(List<OrderItem> orderitens) {
+        this.orderitens = orderitens;
     }
 }
