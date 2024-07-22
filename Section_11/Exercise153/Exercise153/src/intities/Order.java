@@ -42,10 +42,6 @@ public class Order {
     public void removeOrderitens(OrderItem product) {
         this.orderitens.remove(product);
     }
-    public List<OrderItem> getOrderitens() {
-        return orderitens;
-    }
-    public void setOrderitens(List<OrderItem> orderitens) {
-        this.orderitens = orderitens;
-    }
+
+
 }

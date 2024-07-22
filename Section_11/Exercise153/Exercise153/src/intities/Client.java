@@ -1,6 +1,7 @@
 package Section_11.Exercise153.Exercise153.src.intities;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Client {
@@ -33,5 +34,10 @@ public class Client {
     }
 
 
-
+    @Override
+    public String toString() {
+        return getName() + " " +
+                getBirthDate().format(DateTimeFormatter.ofPattern("(dd/MM/yyyy)")) + " - " +
+                getEmail();
+    }
 }
