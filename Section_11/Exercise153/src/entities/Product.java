@@ -1,11 +1,8 @@
-package Section_11.Exercise153.Exercise153.src.intities;
+package entities;
 
-public class Product {
+public class Product{
     private String name;
     private double price;
-
-    public Product() {
-    }
 
     public Product(String name, double price) {
         this.name = name;

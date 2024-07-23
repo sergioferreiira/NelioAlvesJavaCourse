@@ -1,8 +1,9 @@
-package Section_11.Exercise153.Exercise153.src.intities;
+package entities;
 
 public class OrderItem {
     private Integer quantity;
     private double price;
+
 
     public OrderItem() {
     }
@@ -28,7 +29,8 @@ public class OrderItem {
         this.price = price;
     }
 
-    public double subTotal(Integer quantity, double price) {
-        return price * quantity;
+    public Double subTotal(int quantity , double price){
+        return quantity * price;
     }
+
 }

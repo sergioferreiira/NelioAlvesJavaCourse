@@ -31,14 +31,7 @@ public class LutheranPolymorphism {
                 int number = sc.nextInt();
                 System.out.print("Type how much you will deposit to your account: ");
                 double balance = sc.nextDouble();
-                Account normalAccount = new Account(number,  name, balance);
-                System.out.println(name +
-                        "\n" +
-                        number +
-                        "\n" +
-                        balance);
-
-                bankAccount.addAccount(normalAccount);
+                bankAccount.addAccount(new Account(number,  name, balance));
 
             }else {
                 sc.nextLine();
@@ -51,23 +44,23 @@ public class LutheranPolymorphism {
                 double balance = sc.nextDouble();
                 System.out.println("How much money do you wanna have of loan");
                 double loanLimit = sc.nextDouble();
-                BusinesAccount accountToBusines = new BusinesAccount(number,name,balance,loanLimit);
-                System.out.println(name +
-                        "\n" +
-                        number +
-                        "\n" +
-                        balance +
-                        "\n" +
-                        loanLimit);
-
-                bankAccount.addBusinesAccount(accountToBusines);
+                bankAccount.addBusinesAccount(new BusinesAccount(number,name,balance,loanLimit));
             }
+
+
+            for(Account acc : bankAccount.getAccounts()){
+                System.out.println("Holder: " + acc.getHolder() +"\n"+ "Balance: " +acc.getBalance());
+            }
+            for(Account acc : bankAccount.getBusinesAccounts()){
+                System.out.println("Holder: " + acc.getHolder() +"\n"+ "Balance: " +acc.getBalance());
+            }
+
 
             sc.nextLine();
             System.out.println("Do you want continue in this system (Y/N)?");
             String systemContinue = sc.nextLine();
 
-            if(systemContinue.charAt(0) == 'N'){
+            if(systemContinue.charAt(0) == 'N' || systemContinue.charAt(0) == 'n'){
                 system = false;
             }else {
                 continue;
